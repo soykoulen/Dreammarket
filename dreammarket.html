@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dreammarket</title>
+  <link rel="stylesheet" href="dreammarket.css" />
+</head>
+<body>
+  <div class="eye top-left"></div>
+  <div class="eye top-right"></div>
+  <div class="eye bottom-left"></div>
+  <div class="eye bottom-right"></div>
+
+  <div class="glyphs"></div>
+
+  <div class="market-container">
+    <header class="header">
+      <h1>Dreammarket</h1>
+      <p class="subheader">Prices are in sleepy units. Payment is in your memories.</p>
+    </header>
+
+    <div class="main-layout">
+      <div class="products-section">
+        <div class="controls">
+          <input type="text" id="searchInput" placeholder="Search... (but not too deep)" autocomplete="off">
+          
+          <div class="filter-group">
+            <select id="categoryFilter">
+              <option value="">All Categories</option>
+              <option value="artefact">Artifacts</option>
+              <option value="book">Books</option>
+              <option value="mirror">Mirrors</option>
+              <option value="toy">Toys</option>
+              <option value="clock">Clocks</option>
+              <option value="letter">Letters</option>
+              <option value="electronics">Electronics</option>
+              <option value="Beverages">Beverages</option>
+              <option value="Tool">Tools</option>
+            </select>
+
+            <input type="range" id="priceSlider" min="0" max="3000" value="3000" step="100">
+            <span id="priceLabel">Up to: 3000 </span>
+          </div>
+
+          <button id="sortBtn">Sort by Price: Low to High</button>
+          <button id="cartBtn">Black Bag <span id="cartCount">(0)</span></button>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+          
+        </div>
+
+        <div id="emptyState" class="empty-state">
+          <h3>No products found...</h3>
+          <p>Perhaps you've already bought everything. Or... they vanished while you were reading this.</p>
+        </div>
+      </div>
+
+      <!-- Cart Sidebar -->
+      <aside class="cart-sidebar">
+        <h2> Your Cart</h2>
+        <div id="cartItems"></div>
+        <div id="totalSum" class="total-sum">Total: 0 </div>
+        <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+        <div id="emptyCartMsg" class="empty-cart-msg"></div>
+      </aside>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="dreammarket.js"></script>
+</body>
+</html>
