@@ -1,4 +1,4 @@
-## DreamMarket
+## Dreammarket
 
 A surreal experimental web project inspired by dreamcore aesthetics,
 blending elements of e-commerce with abstract and uncanny concepts.
